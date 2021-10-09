@@ -180,3 +180,6 @@ body {
 .select-cinema {
     min-width: 470px;
 }
+option {
+    background-color: gray; /*Временно поменял фон выпдающих списков*/
+}
