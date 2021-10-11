@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -18,6 +19,11 @@
             <img src="img/logo.png" alt="Logo">
         </a>
         <nav class="nav">
+            <button class="m-menu">
+                <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 3.5H15M0 6H15M0 1H15" stroke="white"/>
+                </svg>
+            </button>
             <ul class="menu">
                 <li class="menu-item">
                     <a href="#" class="menu-link">Главная</a>
@@ -61,27 +67,29 @@
                 <div class="rating">
                     <img src="img/imdb.png" alt="imdb" class="rating-icon">
                     <span class="rating-counter">
-                        <strong class="rating-curent">9,2</strong> / 10
+                        <strong class="rating-current">9,2</strong> / 10
                     </span>
+                   <span class="screenshot-gallery"> <a  data-fancybox="gallery"  data-src="img/screen-1-big.jpg"  data-caption="">  <img src="img/screen-1-small.jpg" /></a>
+                    <a data-fancybox="gallery" data-src="img/screen-2-big.jpg">  <img src="img/screen-2-small.jpg" /></a>
+                    <a data-fancybox="gallery" data-src="img/screen-3-big.jpg">  <img src="img/screen-3-small.jpg" /></a> </span>
                 </div>
 
             </div>
         </div>
         <!-- /.film-info -->
-        <a href="#" class="film-trailer">
-            <!--  <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="50" fill="white"/>
-                  &lt;!&ndash;<g clip-path="url(#clip0)">
-                      <path d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z"
-                            fill="#F20D01"/>
-                  </g>&ndash;&gt;
-                  &lt;!&ndash;legend&ndash;&gt;
-                  <defs>
-                      <clipPath id="clip0">
-                          <rect width="41.8013" height="41.8013" fill="white" transform="translate(34.1837 29.0816)"/>
-                      </clipPath>
-                  </defs>
-              </svg>-->
+        <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=6ZfuNTqbHE8"    href="#" class="film-trailer">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="white"/>
+                <g clip-path="url(#clip0)">
+                    <path d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z"
+                          fill="#F20D01"/>
+                </g>
+                <defs>
+                    <clipPath id="clip0">
+                        <rect width="41.8013" height="41.8013" fill="white" transform="translate(34.1837 29.0816)"/>
+                    </clipPath>
+                </defs>
+            </svg>
         </a>
         <!-- /.film-trailer -->
     </div>
@@ -132,7 +140,7 @@
     <!-- /.session -->
 </header>
 <div class="scheme container">
-    <svg class="scheme-svg" width="1170" height="600" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="scheme-svg" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
         <!--  <rect width="1170" height="686" rx="10" fill="#242424" fill-opacity="0.18"/> deleted rectangle-->
         <path class="light" d="M128 115L201.04 48H968.96L1042 115H128Z" fill="url(#paint0_linear)"/>
         <line x1="76" y1="43" x2="1094" y2="43" stroke="black" stroke-opacity="0.39" stroke-width="10"/>
@@ -546,12 +554,13 @@
     <!--block legend-->
 </div>
 <div class="price container">
-        <div class="price-tag">
+    <div class="price-tag">
         <span class="price-label">Всего к оплате</span>
         <span class="price-total">0</span><span class="ruble">₽</span></div>
     <!-- /.price-tag -->
     <a href="" class="button button-pay">Перейти к оплате</a>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script src="js/scripts.js"></script>
 </body>
 </html>
